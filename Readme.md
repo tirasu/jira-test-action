@@ -1,5 +1,7 @@
 # Jira Plugin Tests Action
 
+__Author__ Tiramisu Web Apps 
+
 __Summary__
 
 This github action performs mvn test & mvn integration test in docker container
