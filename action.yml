@@ -1,0 +1,5 @@
+name: 'Test JIRA plugin'
+description: 'Run unit and integration tests for plugin with maven.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
