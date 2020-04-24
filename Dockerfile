@@ -10,7 +10,6 @@ RUN apt-get -y install default-jre
 RUN apt-get -y install default-jdk
 
 COPY . .
-COPY /github/workspace .
 
 # Set up Atlassian SDK
 RUN dpkg -i atlassian-plugin-sdk_8.0.16_all.deb;
