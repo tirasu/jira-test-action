@@ -23,5 +23,5 @@ ENV PATH ${PATH}:${M2_HOME}:${ATLAS_HOME}
 RUN mvn install:install-file -DgroupId=jta -DartifactId=jta -Dversion=1.0.1 -Dpackaging=jar -Dfile=jta-1.0.1.jar
 RUN mvn install:install-file -DgroupId=jndi -DartifactId=jndi -Dversion=1.2.1 -Dpackaging=jar -Dfile=jndi-1.2.1.jar
 
-RUN sed -i -e 's/\r//g' ./entrypoint.sh
-CMD ./entrypoint.sh
+RUN sed -i -e 's/\r//g' entrypoint.sh
+CMD entrypoint.sh
