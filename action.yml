@@ -1,4 +1,4 @@
-name: 'Test JIRA plugin'
+ name: 'Test JIRA plugin'
 description: 'Run unit and integration tests for plugin with maven.'
 inputs:
   mvn-test-args:

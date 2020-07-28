@@ -9,4 +9,8 @@ else
   mvn test
 fi
 echo "Running unit & integration tests"
-mvn integration-test
+if [[ $1 != 'none' ]]; then
+  mvn $1 integration-test
+else
+  mvn integration-test
+fi
