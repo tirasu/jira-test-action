@@ -1,5 +1,12 @@
 name: 'Test JIRA plugin'
 description: 'Run unit and integration tests for plugin with maven.'
+inputs:
+  mvn-test-args:
+    description: 'Optional arguments to pass to mvn test command'
+    required: false
+    default: 'none'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.mvn-test-args }}
