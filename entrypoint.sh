@@ -3,19 +3,19 @@
 echo "Cleaning build"
 mvn clean
 echo "Running unit & integration tests"
-if [[ $1 != 'none' ]]; then
+if [ $1 != 'none' ]; then
   mvn integration-test $1
-  if [[ "$?" -ne 0 ]] ; then
+  if [ "$?" -ne 0 ] ; then
     echo 'could not perform tests'; exit 1
   fi  
 else
   mvn integration-test
-  if [[ "$?" -ne 0 ]] ; then
+  if [ "$?" -ne 0 ] ; then
     echo 'could not perform tests'; exit 1
   fi
 fi
 
-if [[ $2 != 'none' ]]; then
+if [ $2 != 'none' ]; then
   mvn package $2
 else
   mvn package
